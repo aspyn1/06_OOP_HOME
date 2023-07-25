@@ -8,8 +8,8 @@ public class Hero {
 	private char gender;
 	private int level;
 
-	public Hero(){}
-
+	public Hero() {}
+	
 	public String getJob() {
 		return job;
 	}
@@ -50,14 +50,12 @@ public class Hero {
 		this.level = level;
 	}
 
-	public String attack() {
-		this.hp = hp;
-		hp -= 150;
-		return job + "가 기본 공격을 했다.(-150)";
+	public void attack() {
+		System.out.println(job + "가 기본 공격을 했다 (-150)");
 	}
 	
-	public String jump() {
-		return job + "의 점프!";
+	public void jump() {
+		System.out.println(job + "의 점프!");
 	}
 
 

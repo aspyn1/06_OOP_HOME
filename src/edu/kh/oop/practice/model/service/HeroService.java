@@ -6,59 +6,68 @@ public class HeroService {
 	
 	public void practice() {
 		
-		Hero hs1 = new Hero();
-		Hero hs2 = new Hero();
-		Hero hs3 = new Hero();
+		Hero warrior = new Hero();
+		Hero wizard = new Hero();
+		Hero healer = new Hero();
 		
-		hs1.setJob("워리어");
-		hs1.setHp(18000);
-		hs1.setMp(5000);
-		hs1.setGender('남');
-		hs1.setLevel(5);
+		warrior.setJob("워리어");
+		warrior.setHp(18000);
+		warrior.setMp(5000);
+		warrior.setGender('남');
+		warrior.setLevel(5);
 		
-		hs2.setJob("마법사");
-		hs2.setHp(5000);
-		hs2.setMp(25000);
-		hs2.setGender('여');
-		hs2.setLevel(2);
+		wizard.setJob("마법사");
+		wizard.setHp(5000);
+		wizard.setMp(25000);
+		wizard.setGender('여');
+		wizard.setLevel(2);
 
-		hs3.setJob("힐러");
-		hs3.setHp(10000);
-		hs3.setMp(50000);
-		hs3.setGender('남');
-		hs3.setLevel(10);
+		healer.setJob("힐러");
+		healer.setHp(10000);
+		healer.setMp(50000);
+		healer.setGender('남');
+		healer.setLevel(10);
 		
-		System.out.println("직업 : " + hs1.getJob());
-		System.out.println("hp : " + hs1.getHp());
-		System.out.println("mp : " + hs1.getMp());
-		System.out.println("성별 : " + hs1.getGender());
-		System.out.println("현재 레벨은 " + hs1.getLevel() + " 입니다.");
+		System.out.println("직업 : " + warrior.getJob());
+		System.out.println("hp : " + warrior.getHp());
+		System.out.println("mp : " + warrior.getMp());
+		System.out.println("성별 : " + warrior.getGender());
+		System.out.println("현재 레벨은 " + warrior.getLevel() + " 입니다.");
+		
 		System.out.println();
-		System.out.println("직업 : " + hs2.getJob());
-		System.out.println("hp : " + hs2.getHp());
-		System.out.println("mp : " + hs2.getMp());
-		System.out.println("성별 : " + hs2.getGender());
-		System.out.println("현재 레벨은 " + hs2.getLevel() + " 입니다.");
-		System.out.println();
-		System.out.println("=============================");
-		System.out.println();
-		System.out.println(hs2.attack());
-		System.out.println();
-		System.out.println("직업 : " + hs1.getJob());
-		System.out.println("hp : " + hs1.getHp());
-		System.out.println("mp : " + hs1.getMp());
-		System.out.println("성별 : " + hs1.getGender());
-		System.out.println("현재 레벨은 " + hs1.getLevel() + " 입니다.");
+		
+		System.out.println("직업 : " + wizard.getJob());
+		System.out.println("hp : " + wizard.getHp());
+		System.out.println("mp : " + wizard.getMp());
+		System.out.println("성별 : " + wizard.getGender());
+		System.out.println("현재 레벨은 " + wizard.getLevel() + " 입니다.");
+		
 		System.out.println();
 		System.out.println("=============================");
 		System.out.println();
-		System.out.println("직업 : " + hs3.getJob());
-		System.out.println("hp : " + hs3.getHp());
-		System.out.println("mp : " + hs3.getMp());
-		System.out.println("성별 : " + hs3.getGender());
-		System.out.println("현재 레벨은 " + hs3.getLevel() + " 입니다.");
+		
+		wizard.attack();
+		warrior.setHp(warrior.getHp() - 150);
+		
 		System.out.println();
-		System.out.println(hs3.jump());
+		
+		System.out.println("직업 : " + warrior.getJob());
+		System.out.println("hp : " + warrior.getHp());
+		System.out.println("mp : " + warrior.getMp());
+		System.out.println("성별 : " + warrior.getGender());
+		System.out.println("현재 레벨은 " + warrior.getLevel() + " 입니다.");
+		
+		System.out.println();
+		System.out.println("=============================");
+		
+		System.out.println("직업 : " + healer.getJob());
+		System.out.println("hp : " + healer.getHp());
+		System.out.println("mp : " + healer.getMp());
+		System.out.println("성별 : " + healer.getGender());
+		System.out.println("현재 레벨은 " + healer.getLevel() + " 입니다.");
+		
+		System.out.println();
+		healer.jump();
 
 		
 	}
